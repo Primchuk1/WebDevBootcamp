@@ -1,0 +1,51 @@
+<%- include("partials/header.ejs") %>
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <% if (locals.posts !== undefined && locals.posts.length != 0) { %>
+            <p> Posts: </p>
+            <ul>
+                <% for(let i = 0; i < posts.length; i++){ %>
+                    <form id="form<%=i%>" action="/Update_Post" method="POST">
+                        <input type="hidden" name="index" value="<%=i%>">
+                        <label for="post_title">Title:</label>
+                        <input type="text" id="post_title" name="post_title" value="<%= posts[i].title %>">
+                        <p><label for="post_body">Add a new post:</label></p>
+                        <textarea id="post_body" name="post_body" rows="4" cols="50"><%= posts[i].body %></textarea>
+                        <label for="post_author">Author:</label>
+                        <input type="text" id="post_author" name="post_author" value="<%= posts[i].author %>">
+                        <input type="submit" value="Update">
+                        
+                    </form>
+                    <form action="/Delete_Post" method="POST">
+                        <input type="hidden" name="index" value="<%=i%>">
+                        <input type="submit" value="Delete">
+                    </form>
+                    <br><br>
+                <% } %>
+
+            </ul>
+            
+        <% } %>
+        <form action="/Create_Post" method="POST">
+            <label for="post_title">Title:</label>
+            <input type="text" id="post_title" name="post_title">
+            <p><label for="post_body">Add a new post:</label></p>
+            <textarea id="post_body" name="post_body" rows="4" cols="50" placeholder="Write your post here" ></textarea>
+            <label for="post_author">Author:</label>
+            <input type="text" id="post_author" name="post_author">
+            <input type="submit" value="Add post">
+        </form>
+    </body>
+
+    </html>
+
+<%- include("partials/footer.ejs") %>
