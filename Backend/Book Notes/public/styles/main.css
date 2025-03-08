@@ -1,0 +1,250 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 20px;
+}
+.top-description {
+    max-width: 1400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.book-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+.book {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: flex-start;
+}
+.book img {
+    width: 120px;
+    height: auto;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+.book-details {
+    flex: 1;
+}
+.book h2 {
+    margin: 0 0 10px;
+    color: #333;
+}
+.book .author {
+    font-style: italic;
+    color: #666;
+}
+.book .isbn, .book .date-read {
+    font-size: 0.9em;
+    color: #777;
+}
+.book .description {
+    margin: 15px 0;
+    line-height: 1.6;
+}
+
+.book .notes {
+    margin: 15px 0;
+    line-height: 1.6;
+}
+
+.book .rating {
+    font-weight: bold;
+    color: #d9534f;
+}
+
+button {
+    border: none;
+    background: none;
+    padding: 0;
+    font-size: inherit;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.book-form {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.book-form .book {
+    display: flex;
+    align-items: flex-start;
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.book-form img {
+    width: 120px;
+    height: auto;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+.book-form .book-details {
+    flex: 1;
+}
+
+.book-form label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+    color: #333;
+}
+
+.book-form input, .book-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.book-form textarea {
+    resize: vertical;
+}
+
+.book-form button, .edit-btn, .delete-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 15px;
+    background-color: #d9534f;
+    color: white;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.book-form button:hover, .edit-btn:hover, .delete-btn:hover {
+    background-color: #c9302c;
+}
+
+.book-form {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.book-form label {
+    font-weight: bold;
+    color: #333;
+}
+
+.book-form input,
+.book-form textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.book-form textarea {
+    resize: none;
+}
+
+#show-form-btn, #back-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+#show-form-btn:hover, #back-btn:hover {
+    background-color: #0056b3;
+}
+
+pre{
+    max-width: 1300px;
+}
+
+/* Modal Background */
+.modal {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal Content Box */
+.modal-content {
+    background: white;
+    width: 50%;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Buttons */
+#confirm-delete, #cancel-delete {
+    margin: 10px;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#confirm-delete {
+    background-color: #d9534f;
+    color: white;
+}
+
+#cancel-delete {
+    background-color: #6c757d;
+    color: white;
+}
+
+/*
+.save-btn, .cancel-btn, .edit-btn, .delete-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.cancel-btn, .delete-btn {
+    background-color: #dc3545;
+}
+
+.save-btn:hover, .edit-btn:hover {
+    background-color: #0056b3;
+}
+
+.cancel-btn:hover, .delete-btn:hover {
+    background-color: #c82333;
+}
+*/
